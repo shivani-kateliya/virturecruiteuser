@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Interview Quiz</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <style>
+    /* Quiz Styles */
+    body {
+      background-color: white;
+    }
+
+    #quiz {
+      margin-bottom: 20px;
+    }
+
+    .option {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .navigation {
+      margin-top: 20px;
+    }
+
+    .navigation button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .navigation button:hover {
+      background-color: #45a049;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    /* Timer Styles */
+    #timer {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Roboto", sans-serif;
+    }
+
+    .p {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+
+<body class="w3-light-grey" >
+  <!-- Page Container -->
+  <div class="w3-content w3-margin-top" style="max-width: 1400px">
+    <!-- The Grid -->
+    <div class="w3-row-padding">
+      <!-- Left Column -->
+      <div class="w3-third">
+        <div class="w3-white w3-text-grey w3-card-4">
+          <div class="w3-display-container" style="height: 85vh; background-color:#CBDADD; color: black;">
+            <p>
+              <i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Company Name
+            </p>
+            <p>
+              <i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Job Role
+            </p>
+            <p>
+              <i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>Quiz Description: Lorem ipsum
+              dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic.
+              Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.
+            </p>
+
+            <hr />
+
+            <p class="w3-large">
+              <b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills Required:</b>
+            </p>
+            <div class="p">
+              <p>HTML</p>
+              <p>CSS</p>
+              <p>JS</p>
+              <br />
+              <br />
+            </div>
+          </div>
+        </div>
+        <br />
+        <!-- End Left Column -->
+      </div>
+
+      <!-- Right Column -->
+      <div class="w3-twothird" style="margin-top: 30px;">
+        <!-- Quiz Section -->
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-question-circle fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i> Interview Quiz</h2>
+          <div class="w3-container" style="height: 60vh; ">
+            <div class="w3-container w3-card w3-white w3-margin-bottom">
+              <!-- Timer -->
+              <div id="timer" class="w3-right w3-padding"></div>
+              <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-question-circle fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Front-end Job Interview Quiz</h2>
+              <div class="w3-container" style="background-color:#CBDADD;">
+                <!-- Quiz question and options -->
+                <div id="quiz"></div>
+                <!-- Navigation buttons -->
+                <div class="navigation">
+                  <button id="prev" onclick="prevQuestion()">&lt; Previous</button>
+                  <button id="next" onclick="nextQuestion()">Next &gt;</button>
+                </div>
+                <!-- Result display area -->
+                <div id="result"></div>
+                <!-- Submit button -->
+                <div id="submit" style="display: none;">
+                  <button onclick="submitQuiz()"> <a href="quiz_submit.html">Submit</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- JavaScript -->
+          <script>
+            // Quiz questions array
+            var questions = [
+              {
+                question: "What does HTML stand for?",
+                options: ["Hyper Text Markup Language", "Hyperlinks and Text Markup Language", "Home Tool Markup Language", "Hyper Text Makeup Language"],
+                answer: 0
+              },
+              {
+                question: "What does CSS stand for?",
+                options: ["Cascading Style Sheets", "Creative Style Sheets", "Computer Style Sheets", "Colorful Style Sheets"],
+                answer: 0
+              },
+              // Add more questions as needed
+              {
+                question: "What does JS stand for?",
+                options: ["JavaScript", "Java Syntax", "Jelly Sandals", "Jumbo Soup"],
+                answer: 0
+              },
+              {
+                question: "Which CSS property is used to change the text color of an element?",
+                options: ["color", "text-color", "font-color", "style-color"],
+                answer: 0
+              },
+              {
+                question: "What is the result of 2 + 2 * 2?",
+                options: ["6", "8", "4", "2"],
+                answer: 1
+              },
+              {
+                question: "Which HTML attribute is used to define inline styles?",
+                options: ["style", "css", "class", "font"],
+                answer: 0
+              },
+             
+            ];
+
+            var currentQuestion = 0; // Index of the current question
+            var timerInterval; // Interval to update the timer
+            var timeLeft = 60; // Total time in seconds
+
+            // Function to display the timer
+            function displayTimer() {
+              var timerElement = document.getElementById("timer");
+              var minutes = Math.floor(timeLeft / 60);
+              var seconds = timeLeft % 60;
+              timerElement.textContent = "Time Left: " + minutes + "m " + seconds + "s";
+            }
+
+            // Function to start the timer
+            function startTimer() {
+              displayTimer();
+              timerInterval = setInterval(function () {
+                timeLeft--;
+                if (timeLeft <= 0) {
+                  clearInterval(timerInterval);
+                  alert("Time's up!");
+                  // Optionally, you can submit the quiz automatically when time's up
+                  // submitQuiz();
+                }
+                displayTimer();
+              }, 3000);
+            }
+
+            // Function to display the current question
+            function displayQuestion() {
+              var quiz = document.getElementById("quiz");
+              var question = questions[currentQuestion];
+              quiz.innerHTML = "<div id='question'>" + question.question + "</div>";
+
+              // Loop through options and display them
+              for (var i = 0; i < question.options.length; i++) {
+                quiz.innerHTML += "<label class='option'><input type='radio' name='option' value='" + i + "'>" + question.options[i] + "</label>";
+              }
+            }
+
+            // Function to move to the next question
+            function nextQuestion() {
+              currentQuestion++;
+              if (currentQuestion >= questions.length) {
+                currentQuestion = questions.length - 1; // Stay at the last question
+                displaySubmitButton(); // Display the submit button
+              }
+              displayQuestion();
+            }
+
+            // Function to move to the previous question
+            function prevQuestion() {
+              currentQuestion--;
+              if (currentQuestion < 0) {
+                currentQuestion = 0; // Go to the first question
+              }
+              displayQuestion();
+            }
+
+            // Function to display the submit button
+            function displaySubmitButton() {
+              var submitButton = document.getElementById("submit");
+              submitButton.style.display = "block";
+            }
+
+            // Function to submit the quiz
+            function submitQuiz() {
+              // Implement your submission logic here
+              // For example, you can calculate the score and display it to the user
+              alert("Quiz submitted!");
+            }
+
+            // Start the timer when the page loads
+            startTimer();
+            // Display the first question
+            displayQuestion();
+          </script>
+
+          <!-- End Right Column -->
+        </div>
+
+        <!-- End Grid -->
+      </div>
+
+      <!-- End Page Container -->
+    </div>
+
+    <footer style="margin-left: 85%; margin-top: -100px;">
+      VirtrueRecruit copyright
+    </footer>
+
+</body>
+
+</html>

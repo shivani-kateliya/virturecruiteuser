@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>User</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <!-- <style>
+    body {
+
+      /* background-color: white; */
+      background: linear-gradient(to top right, #a4ebe5, white, #c5dedc);
+
+    }
+
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {
+      height: 100%;
+    }
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+
+    .col-sm-3 {
+      height: 100%;
+    }
+
+    .job {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #24698B;
+    border: 1px solid #e3e3e3;
+    border-radius: 20px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    color: #f1f1f1;
+}
+
+.wel{
+  min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color:#CBDADD;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.container-fluid{
+  height: 100vh;
+}
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {
+        height: auto;
+      }
+    }
+  </style> -->
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse visible-xs">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+    
+        <!-- <a class="navbar-brand" href="#">User</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="user.html">Dashboard</a></li>
+          <li><a href="user_interview.html">Interviews</a></li>
+          <li><a href="#">Jobs</a></li>
+          <li><a href="#">My profile</a></li>
+        </ul>
+      </div>
+    </div> -->
+  </nav>
+
+  <div class="container-fluid" >
+    <div class="row content">
+      <div class="col-sm-3 sidenav" style=" background-color:#CBDADD; height:160vh;">
+        <h2>User</h2>
+        <ul class="nav nav-pills nav-stacked">
+          <li class="active"><a href="user.html">Dashboard</a></li>
+          <li><a href="user_interview.html">Interviews</a></li>
+          <li><a href="job.html">Jobs</a></li>
+          <li><a href="profile.html">My Profile</a></li>
+          <li><a href="index.html" class="btn btn-info btn-lg">
+            <span class="glyphicon glyphicon-log-out"></span> Log out
+          </a></li>
+        </ul>
+        <br />
+      </div>
+      <br />
+
+      <div class="col-sm-9">
+        <div class="wel" style="box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);">
+          <h3>Hello Welcome user</h3>
+          <p id="time">Online at 8:30 pm .</p>
+        </div>
+        <div class="row">
+          <h4 style="padding: 10px;">Trending Jobs</h4>
+
+          <div class="col-sm-3">
+            <div class="job">
+              <h4> <a href="user_jobs.html">Job 1</a></h4>
+              <p><a href="user_jobs.html">Software engineer</a></p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="job">
+              <h4> <a href="user_job2.html">Job 2</a></h4>
+              <p> <a href="user_job2.html">Python Developer</a></p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="job">
+              <h4><a href="user_jobs.html">Job 3</a></h4>
+              <p><a href="user_jobs.html">Front-end Developer</a></p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="job">
+              <h4><a href="user_job2.html">job 4</a></h4>
+              <p><a href="user_job2.html">Data Analyst</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <h4 style="padding: 10px;">Applied Jobs</h4>
+          <div class="col-sm-4">
+            <div class="job">
+              <p> <a href="applied.html">Job role :1
+                <br><br>
+              Company 1 ( Software Engineer)
+              <br>
+             Company 2 ( Software Engineer)
+             <br>
+             Company 3 ( Software Engineer)
+            </a></p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="job">
+              <p><a href="applied.html">Job role :2
+                <br><br>
+              Company 1 ( Frontend Developer)  <br>
+              Company 2 ( Frontend Developer)<br>
+             Company 3 (Frontend Developer)</a></p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="job">
+              <p><a href="applied.html">Job role :3
+             <br><br>Company 1 (Intern)<br><br>
+              Company 2 ( Intern)<br><br>
+              Company 3 ( Intern) <br><br>
+            </a></p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <h4 style="padding: 10px;">Your Documents</h4>
+          <div class="col-sm-4">
+            <div class="job">
+              <p id="resume"><a href="demo_resume.pdf"  style="color: black;">Resume</a></p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="job">
+              <p id="cv"><a href="Cv.pdf" style="color:black;">CV</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+
+</html>

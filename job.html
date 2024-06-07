@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>User</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <!-- <style>
+    body {
+
+      /* background-color: white; */
+      background: linear-gradient(to top right, #a4ebe5, white, #c5dedc);
+
+    }
+
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {
+      height: 100%;
+    }
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+
+    .col-sm-3 {
+      height: 100%;
+    }
+
+    .job {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #24698B;
+    border: 1px solid #e3e3e3;
+    border-radius: 20px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    color: #f1f1f1;
+}
+
+.wel{
+  min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color:#CBDADD;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.container-fluid{
+  height: 100vh;
+}
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {
+        height: auto;
+      }
+    }
+  </style> -->
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse visible-xs">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <!-- <a class="navbar-brand" href="#">User</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="user.html">Dashboard</a></li>
+          <li><a href="user_interview.html">Interviews</a></li>
+          <li><a href="#">Jobs</a></li>
+          <li><a href="#">My profile</a></li>
+        </ul>
+      </div>
+    </div> -->
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav hidden-xs" style=" background-color:#CBDADD; height:160vh;">
+                <h2>User</h2>
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="user.html">Dashboard</a></li>
+                    <li><a href="user_interview.html">Interviews</a></li>
+                    <li class="active"><a href="job.html">Job</a></li>
+                    <li><a href="profile.html">My Profile</a></li>
+                    <li><a href="index.html" class="btn btn-info btn-lg">
+                      <span class="glyphicon glyphicon-log-out"></span> Log out
+                    </a></li>
+                </ul>
+                <br />
+            </div>
+            <br />
+
+            <div class="col-sm-9">
+                <div class="wel" style="box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);">
+                    <h3>Hello Welcome user</h3>
+                    <p id="time">Online at 8:30 pm .</p>
+                </div>
+
+                <class="left-side">
+                    <button class="job-search-button"
+                        style="margin-right: 30px; margin-left: 30px; margin-bottom: 30px;">
+                        <span class="label"><a href="">JobSearch</a></span>
+                        <span class="icon">&#128269;</span>
+                    </button>
+                    <div>
+                        <div class="img"><img src="frontend.png" alt=""></div>
+                        <div class="img"><img src="backend.png" alt=""></div>
+                        <div class="img"><img src="full stack.png" alt=""></div>
+                        <div class="img"><img src="andriod.png" alt=""></div>
+                        <div class="img"><img src="view all.png" alt=""></div>
+                        <div class="items">
+                            <ul class="list" style="list-style: none;">
+                                <li class="list">Frontend</li>
+                                <li class="list">Backend</li>
+                                <li class="list">Fullstack</li>
+                                <li class="list">Android</li>
+                                <!-- <li class="list">Machine learning</li> -->
+                            </ul>
+                        </div>
+                        <section class="job-listings">
+                            <p></p>
+                        </section>
+                        <section class="profiles">
+                            <img src="person.png" alt="Profile 1" width="100px">
+                            <div class="profile">
+                                <p><b>Frontend Developer</b></p>
+                                <p>Studied at GTU|Ahmedabad</p>
+                                <button class="message-button" > <a href="user_jobs.html">Apply</a></button>
+                            </div>
+
+                            <img src="person.png" alt="Profile" width="100px">
+                            <div class="profile">
+                                <p><b>Frontend Developer</b></p>
+                                <p>Studied at LTJ Ahmedabad</p>
+                                <p>Working at IL Company </p>
+                                <button class="message-button">Message</button>
+                            </div>
+                        </section>
+                        <div class="line2"></div>
+                        <section class="profiles">
+                            <img src="person.png" alt="Profile 1" width="100px">
+                            <div class="profile">
+                                <p><b>Frontend Developer</b></p>
+                                <p>Studied at GTU|Ahmedabad</p>
+                                <button class="message-button" ><a href="user_jobs.html">Apply</a></button>
+                            </div>
+
+                            <img src="person.png" alt="Profile" width="100px">
+                            <div class="profile">
+                                <p><b>Frontend Developer</b></p>
+                                <p>Studied at LTJ Ahmedabad</p>
+                                <p>Working at IL Company </p>
+                                <button class="message-button">Message</button>
+                            </div>
+                        </section>
+                        <div class="line2"></div>
+                        <section class="profiles">
+                            <img src="person.png" alt="Profile 1" width="100px">
+                            <div class="profile">
+                                <p><b>Frontend Developer</b></p>
+                                <p>Studied at GTU|Ahmedabad</p>
+                                <button class="message-button" ><a href="user_jobs.html">Apply</a></button>
+                            </div>
+
+                            <img src="person.png" alt="Profile" width="100px">
+                            <div class="profile">
+                                <p><b>Frontend Developer</b></p>
+                                <p>Studied at LTJ Ahmedabad</p>
+                                <p>Working at IL Company </p>
+                                <button class="message-button">Message</button>
+                            </div>
+                        </section>
+                        <div class="line2"></div>
+                        <section class="profiles">
+                            <img src="person.png" alt="Profile 1" width="100px">
+                            <div class="profile">
+                                <p><b>Frontend Developer</b></p>
+                                <p>Studied at GTU|Ahmedabad</p>
+                                <button class="message-button" ><a href="user_jobs.html">Apply</a></button>
+                            </div>
+
+                            <img src="person.png" alt="Profile" width="100px">
+                            <div class="profile">
+                                <p><b>Frontend Developer</b></p>
+                                <p>Studied at LTJ Ahmedabad</p>
+                                <p>Working at IL Company </p>
+                                <button class="message-button">Message</button>
+                            </div>
+                    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

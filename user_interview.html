@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>User</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <!-- <style>
+         
+      /* a {
+        text-decoration: none;
+        color: black;
+      }
+      a:hover {
+        text-decoration: none;
+      }
+      /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+      .row.content {
+        height: 100%;
+      }
+
+      /* Set gray background color and 100% height */
+      .sidenav {
+        background-color: #f1f1f1;
+        height: 100%;
+      }
+      .col-sm-3 {
+        height: 100%;
+      }
+      .container-fluid{
+  height: 100vh;
+}
+      /* On small screens, set height to 'auto' for the grid */
+      @media screen and (max-width: 767px) {
+        .row.content {
+          height: auto;
+        }
+      }
+    </style>  -->
+</head>
+
+<body >
+  <nav class="navbar navbar-inverse visible-xs">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">User</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="user.html">Dashboard</a></li>
+          <li class="active"><a href="user_interview.html">Interviews</a></li>
+          <li><a href="job.html">Jobs</a></li>
+          <li><a href="profile.html">My profile</a></li>
+          <li><a href="index.html" class="btn btn-info btn-lg">
+            <span class="glyphicon glyphicon-log-out"></span> Log out
+          </a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row content">
+      <div class="col-sm-3 sidenav hidden-xs" style=" background-color:#CBDADD;">
+        <h2>User</h2>
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="user.html">Dashboard</a></li>
+          <li class="active"><a href="user_interview.html">Interviews</a></li>
+          <li><a href="job.html">Jobs</a></li>
+          <li><a href="profile.html">My Profile</a></li>
+        </ul>
+        <br />
+      </div>
+      <br />
+
+      <div class="col-sm-9">
+        <div class="wel" style="box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);">
+          <h3>Hello Welcome user</h3>
+          <p id="time">Online at 8:30 pm .</p>
+        </div>
+        <div class="row">
+          <h4 style="padding: 10px;">Applied Jobs</h4>
+          <a href="applied.html">
+            <div class="col-sm-4">
+              <div class="job">
+                <p>Job role :1</p>
+                <p>Company 1 ( Software Engineer)</p>
+                <p>Company 2 ( Software Engineer)</p>
+                <p>Company 3 ( Software Engineer)</p>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="job">
+                <p>Job role :2</p>
+                <p>Company 1 ( Frontend Developer)</p>
+                <p>Company 2 ( Frontend Developer)</p>
+                <p>Company 3 (Frontend Developer)</p>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="job">
+                <p>Job role :3</p>
+                <p>Company 1 (Intern- developer)</p>
+                <p>Company 2 ( Intern- developer)</p>
+                <p>Company 3 (Intern- developer)</p>
+              </div>
+            </div>
+          </a>
+          </div>
+        </div>
+        <div class="row">
+          <h4 style="padding-left:20px;">Your Assesment :</h4>
+          <div class="col-sm-4">
+            <div class="job">
+              <p><a href="assessment.jpg">
+                TCS : <br >
+                Quiz 1(Aptitude) : 40/75 <br >
+                Quiz 2(Technical): 75/100 <br>
+                Status :PASS <br ></a>
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="job">
+              <p><a href="assessment.jpg">
+                TCS : <br >
+                Quiz 1(Aptitude) : 40/75 <br >
+                Quiz 2(Technical): 75/100 <br>
+                Status :PASS <br ></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+
+</html>
